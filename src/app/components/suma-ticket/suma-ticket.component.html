@@ -1,0 +1,29 @@
+<p>suma-ticket works!</p>
+
+<h1>Ticket</h1>
+
+<section>
+  <div class="left">
+    <input type="number" name="" id="" [(ngModel)]="costoIngreso" />
+    <p></p>
+    <input type="number" name="" id="" [(ngModel)]="descIngreso" />
+    <p></p>
+    <button (click)="addValues()">Agregar</button>
+  </div>
+  <div class="right">
+    <div class="line" *ngFor="let item of ticket, let i = index">
+      <div class="value">
+        <span>Valor</span>
+        <h2>{{ item.valor }}</h2>
+      </div>
+      <div class="desc">
+        <span>Descuento</span>
+        <p>- {{ item.desc }}</p>
+      </div>
+      <div class="delete" title="Eliminar" (click)="deleteElement(i)">
+          <img src="/assets/img/cross.svg" alt="">
+      </div>
+    </div>
+    <div class="total">{{ total }}</div>
+  </div>
+</section>
