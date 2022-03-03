@@ -16,17 +16,17 @@
       <div class="line" *ngFor="let item of ticket, let i = index">
         <div class="value">
           <span>Valor</span>
-          <h2>{{ item.valor }}</h2>
+          <h2>{{ item.valor.toFixed(2) }}</h2>
         </div>
         <div class="desc">
           <span>Descuento</span>
-          <p>- {{ item.desc }}</p>
+          <p>- {{ item.desc.toFixed(2) }}</p>
         </div>
         <div class="delete" title="Eliminar" (click)="deleteElement(i)">
             <img src="/assets/img/cross.svg" alt="">
         </div>
       </div>
     </ng-container>
-    <div class="total">{{ total }}</div>
+    <div class="total">$ {{ total.toFixed(2) }}</div>
   </div>
 </section>

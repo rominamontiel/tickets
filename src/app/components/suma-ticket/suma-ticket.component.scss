@@ -14,8 +14,9 @@ section{
     .line{
         padding: 1rem;
         padding-right: 4rem;
-        border-bottom: 1px solid #333;
+        border-bottom: 1px solid #dadada;
         position: relative;
+        font-family: 'Courier New', Courier, monospace;
 
         &:last-child{
             border-bottom: none;
@@ -90,6 +91,7 @@ section{
         display: flex;
         align-items: center;
         justify-content: center;
+        font-family: 'Courier New', Courier, monospace;
         margin-bottom: 1rem;
     }
 
@@ -100,5 +102,6 @@ section{
         font-size: 1.8rem;
         padding: 1.5rem 1rem 0 0;
         text-align: right;
+        font-family: 'Courier New', Courier, monospace;
     }
 }
