@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./suma-ticket.component.scss'],
 })
 export class SumaTicketComponent implements OnInit {
-  public ticket = [{valor: 0, desc: 0}]
+  public ticket = [{valor: 0, desc: 0}];
   public costoIngreso = 0;
   public descIngreso = 0;
   public total = 0;
@@ -25,7 +25,6 @@ export class SumaTicketComponent implements OnInit {
       var b = element.desc;
       this.total = this.total + a - b;
     });
-    console.log(this.ticket);
   }
 
   addValues() {
@@ -50,7 +49,6 @@ export class SumaTicketComponent implements OnInit {
 
   deleteElement(i:number){
     this.ticket.splice(i,1);
-
     this.updateTotal()
   }
 }

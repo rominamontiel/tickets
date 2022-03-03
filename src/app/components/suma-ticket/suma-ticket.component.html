@@ -11,19 +11,22 @@
     <button (click)="addValues()">Agregar</button>
   </div>
   <div class="right">
-    <div class="line" *ngFor="let item of ticket, let i = index">
-      <div class="value">
-        <span>Valor</span>
-        <h2>{{ item.valor }}</h2>
+    <div class="empty" *ngIf="ticket.length == 0">Ingresar algún valor</div>
+    <ng-container *ngIf="ticket.length > 0">
+      <div class="line" *ngFor="let item of ticket, let i = index">
+        <div class="value">
+          <span>Valor</span>
+          <h2>{{ item.valor }}</h2>
+        </div>
+        <div class="desc">
+          <span>Descuento</span>
+          <p>- {{ item.desc }}</p>
+        </div>
+        <div class="delete" title="Eliminar" (click)="deleteElement(i)">
+            <img src="/assets/img/cross.svg" alt="">
+        </div>
       </div>
-      <div class="desc">
-        <span>Descuento</span>
-        <p>- {{ item.desc }}</p>
-      </div>
-      <div class="delete" title="Eliminar" (click)="deleteElement(i)">
-          <img src="/assets/img/cross.svg" alt="">
-      </div>
-    </div>
+    </ng-container>
     <div class="total">{{ total }}</div>
   </div>
 </section>

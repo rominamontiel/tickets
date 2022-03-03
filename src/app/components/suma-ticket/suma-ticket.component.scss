@@ -82,6 +82,17 @@ section{
         }
     }
 
+    .empty{
+        width: 100%;
+        border: 2px dashed #d1d1d1;
+        color: #adadad;
+        height: 4rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+    }
+
     .total{
         color: red;
         border-top: 1px solid #333;
