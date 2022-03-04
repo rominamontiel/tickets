@@ -4,11 +4,13 @@
 
 <section>
   <div class="left">
-    <input type="number" name="" id="" [(ngModel)]="costoIngreso" />
-    <p></p>
-    <input type="number" name="" id="" [(ngModel)]="descIngreso" />
-    <p></p>
-    <button (click)="addValues()">Agregar</button>
+    <div class="box-inputs">
+      <p class="label cost">Costo</p>
+      <input class="input-number cost" type="number" name="" id="" [(ngModel)]="costoIngreso" />
+      <p class="label desc">Descuento</p>
+      <input class="input-number desc" type="number" name="" id="" [(ngModel)]="descIngreso" />
+    </div>
+    <button class="add-btn" (click)="addValues()">Agregar</button>
   </div>
   <div class="right">
     <div class="empty" *ngIf="ticket.length == 0">Ingresar algún valor</div>
