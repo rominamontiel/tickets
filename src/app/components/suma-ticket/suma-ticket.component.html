@@ -1,7 +1,3 @@
-<p>suma-ticket works!</p>
-
-<h1>Ticket</h1>
-
 <section>
   <div class="left">
     <div class="box-inputs">
@@ -13,6 +9,13 @@
     <button class="add-btn" (click)="addValues()">Agregar</button>
   </div>
   <div class="right">
+    <header>
+      <div class="moment">
+        <span>{{ currentDate }}</span>
+        <span>{{ currentHour }}</span>
+      </div>
+      <h2>Supermercado S.A.</h2>
+    </header>
     <div class="empty" *ngIf="ticket.length == 0">Ingresar algún valor</div>
     <ng-container *ngIf="ticket.length > 0">
       <div class="line" *ngFor="let item of ticket, let i = index">

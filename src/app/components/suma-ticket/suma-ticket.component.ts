@@ -11,11 +11,13 @@ export class SumaTicketComponent implements OnInit {
   public descIngreso = 0;
   public total = 0;
   public cont = 0;
+  public date = new Date();
+  public currentDate = this.date.getDate() + '/' + (this.date.getMonth() + 1) + '/' + this.date.getFullYear(); 
+  public currentHour = this.date.getHours() + ':' + this.date.getMinutes();
   
   constructor() {}
 
   ngOnInit(): void {
-    console.log(this.ticket);
   }
 
   updateTotal(){
@@ -44,7 +46,6 @@ export class SumaTicketComponent implements OnInit {
     } else{
       alert('Campo vacío ⛔');
     }
-
   }
 
   deleteElement(i:number){
